@@ -46,6 +46,7 @@ void queryDiag(CANHandler &canHandler, int rate) {
     
   }
   if(canHandler.isProfiled()){
+    canHandler.setFilteredID(0);
     for(int i = 0; i < 32; i++){
       if(canHandler.diagAry[i]){
         msg.ext = 0;
