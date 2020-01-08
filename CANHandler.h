@@ -55,7 +55,7 @@ void CANHandler::profileDiag(CAN_message_t &frame) {
   }
   for (int i = 0; i < 32; i++){
     if(diagAry[i]){
-      if(i < 15) Serial.print("0");
+      if(i <= 15) Serial.print("0");
       Serial.print(i + 1, HEX);
       Serial.print(" ");
       profiled = true;
